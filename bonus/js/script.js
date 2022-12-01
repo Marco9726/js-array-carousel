@@ -31,9 +31,9 @@ items[itemActive].classList.add('active');
 
 //rendo attivo anche il primo cerchio di navigazione
 
-const circles = document.getElementsByClassName('circle');
+const thum = document.getElementsByClassName('thum-img');
 
-circles[itemActive].classList.add('active');
+thum[itemActive].classList.add('active');
 
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
@@ -41,7 +41,7 @@ const next = document.querySelector('.next');
 next.addEventListener('click', function(){
     // elimino la classe active dagli elemnti precedenti
     items[itemActive].classList.remove('active');
-    circles[itemActive].classList.remove('active');
+    thum[itemActive].classList.remove('active');
     //incremento il suo valore di 1
     itemActive += 1
     // se itemActive arriva 5, visualizza la prima immagine
@@ -50,14 +50,14 @@ next.addEventListener('click', function(){
     }
     //aggiungere la class active al nuovo elemento dell'array items
     items[itemActive].classList.add('active');
-    circles[itemActive].classList.add('active');
+    thum[itemActive].classList.add('active');
     
 });
 
 prev.addEventListener('click', function(){
     // elimino la classe active dagli elemnti precedenti
     items[itemActive].classList.remove('active');
-    circles[itemActive].classList.remove('active');
+    thum[itemActive].classList.remove('active');
     //incremento il suo valore di 1
     itemActive -= 1
     // se itemActive arriva a -1, visualizza l'ultima immagine 
@@ -66,6 +66,6 @@ prev.addEventListener('click', function(){
     }
     //aggiungere la class active al nuovo elemento dell'array items 
     items[itemActive].classList.add('active');
-    circles[itemActive].classList.add('active');
+    thum[itemActive].classList.add('active');
 })
 

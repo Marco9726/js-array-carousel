@@ -62,11 +62,11 @@
 }
 
 .next{
-    top: 5px; 
+    bottom: 5px; 
 }
 
 .prev{
-    bottom: 5px;
+    top: 5px;
 }
 
 .prev:hover, .next:hover{
@@ -93,6 +93,6 @@
 }
 
 
-.circle.active, .circle:hover{
-    background-color: rgba(174, 174, 174, 1); 
+.thum-img.active{
+    opacity: 100%;
 }
