@@ -39,26 +39,33 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
 next.addEventListener('click', function(){
-    //verifico l'elemento attivo (itemActive)
+    // elimino la classe active dagli elemnti precedenti
     items[itemActive].classList.remove('active');
     circles[itemActive].classList.remove('active');
     //incremento il suo valore di 1
     itemActive += 1
-    //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
+    // se itemActive arriva 5, visualizza la prima immagine
+    if (itemActive > imagesArray.length - 1){
+        itemActive = 0;
+    }
+    //aggiungere la class active al nuovo elemento dell'array items
     items[itemActive].classList.add('active');
     circles[itemActive].classList.add('active');
-    //stessa cosa per i cerchi
+    
 });
 
 prev.addEventListener('click', function(){
-   //verifico l'elemento attivo (itemActive)
-   items[itemActive].classList.remove('active');
-   circles[itemActive].classList.remove('active');
-   //incremento il suo valore di 1
-   itemActive -= 1
-   //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
-   items[itemActive].classList.add('active');
-   circles[itemActive].classList.add('active');
+    // elimino la classe active dagli elemnti precedenti
+    items[itemActive].classList.remove('active');
+    circles[itemActive].classList.remove('active');
+    //incremento il suo valore di 1
+    itemActive -= 1
+    // se itemActive arriva a -1, visualizza l'ultima immagine 
+    if (itemActive < 0){
+        itemActive = 4;
+    }
+    //aggiungere la class active al nuovo elemento dell'array items 
+    items[itemActive].classList.add('active');
+    circles[itemActive].classList.add('active');
 })
-
 
